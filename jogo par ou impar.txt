@@ -1,0 +1,47 @@
+from random import randint
+
+print('='* 35)
+print('''Jogo Par ou impar:  ''')
+print('='* 35)
+
+jogada = str(input('''Digite Par ou impar: ''')).upper().strip()[0]
+numero = int(input('''Escolha um numero: (de 1  a 5) '''))
+print('='* 35)
+print('='* 35)
+print('''O computador esta escolhendo''')  
+
+print('''='''* 35)
+computador = randint(0,5)
+print('='* 35)
+
+print('''Voce escolheu {}  e o computador {} '''.format(numero, computador))
+
+soma = numero + computador
+
+print('='* 35)
+print('''resultado''',soma)
+print('='* 35)
+ 
+if soma %  2 == 0:
+  print('''='''* 35)
+  if  jogada in 'Pp': 
+    print('PAR VOCE VENCEU, PARABENS!')
+    print('IMPAR, VOCE PERDEU, NAO FIQUE TRISTE')
+    print('''='''* 35)
+  else:
+   
+    print('IMPAR, VOCE PERDEU, NAO FIQUE TRISTE')
+    print('PAR VOCE VENCEU, PARABENS!')
+else:
+  print('IMPAR, VOCE VENCEU PARABENS!!')
+  if jogada in 'Ii':
+    print('PAR VOCÊ PERDEU! ')
+    print('''='''* 35)
+  else:
+    #print('IMPAR VOCE VENCEU, PARABENS!')
+  
+    print('PAR, VOCE PERDEU NAO FIQUE TRISTE!')
+    print('''='''* 35)
+    print('='* 35)
+
+
